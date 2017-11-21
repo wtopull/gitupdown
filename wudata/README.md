@@ -4,12 +4,12 @@
 
 ## Build Setup
 
-# clone
-git clone https://github.com/wtopull/gitupdown.git 'wudata'
-
 ``` bash
 # install dependencies
 npm install
+
+# clone
+git clone https://github.com/wtopull/gitupdown.git 'wudata'
 
 # serve with hot reload at localhost:8080
 npm run dev
