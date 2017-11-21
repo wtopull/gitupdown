@@ -4,6 +4,9 @@
 
 ## Build Setup
 
+# clone
+git clone https://github.com/wtopull/gitupdown.git 'wudata'
+
 ``` bash
 # install dependencies
 npm install
