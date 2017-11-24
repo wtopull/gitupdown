@@ -1,17 +1,27 @@
 <template>
-	<div class="one">第一页</div>
-	<p>{{msg}}</p>
+	<div class="index">
+		<div class="footer">
+			<ul>
+				<li v-for="(data,index) in newsList">{{data}}</li>
+			</ul>
+		</div>
+	</div>
 </template>
 
-<script>
-export default {
-  name: 'index',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
+<script scoped>
+export default{
+	data(){
+		return {
+			title: "我是首页",
+			newsList: [
+				'11111',
+				'22222',
+				'33333'
+			]
+		}
+	}
 }
 </script>
 
+<style>
 </style>
