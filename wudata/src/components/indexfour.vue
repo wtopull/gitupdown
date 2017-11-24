@@ -1,27 +1,23 @@
 <template>
   <div class="indexfour">
     <h1>{{ msg }}</h1>
-    <banner></banner>
-    <ul class="fournav">
-			<router-link to="/indexfour/fcula" tag="li">彩票游戏</router-link>
-			<router-link to="/indexfour/fculb" tag="li">真人视频</router-link>
-			<router-link to="/indexfour/fculc" tag="li">电子游戏</router-link>
-			<router-link to="/indexfour/fculd" tag="li">体育赛事</router-link>
-		</ul>
-		<div class="fourcontent">
-			<ul class="fcul">
-				<!--<router-link name="fcula" :to="{name: 'indexfour', params: {userID: 4}}" tag="li">-->
-				<li><fcula></fcula></li>
-				<li><fculb></fculb></li>
-				<li><fculc></fculc></li>
-				<li><fculd></fculd></li>
-			</ul>
-		</div>
+    <!--<banner></banner>-->
+    <div class="banner">
+    	<img src="../assets/image/banner-2.jpg" />
+    </div>
+    <div class="fourcontent">
+    	<swiper :options="swiperOptionnav">
+	    	<swiper-slide><fcula></fcula></swiper-slide>
+	    	<swiper-slide><fculb></fculb></swiper-slide>
+	    	<swiper-slide><fculc></fculc></swiper-slide>
+	    	<swiper-slide><fculd></fculd></swiper-slide>
+	  	</swiper>
+	  	<div class="swiper-pagination" slot="pagination"></div>
+    </div>
   </div>
 </template>
-
 <script>
-import banner from './banner/banner.vue';
+//import banner from './banner/banner.vue';
 import fcula	from './pageindexfour/fcula.vue';
 import fculb	from './pageindexfour/fculb.vue';
 import fculc	from './pageindexfour/fculc.vue';
@@ -30,7 +26,18 @@ export default {
   name: 'indexfour',
   data () {
     return {
-      msg: 'Welcome to indexfour'
+      msg: 'Welcome to 游戏中心',
+      swiperOptionnav: {
+          setWrapperSize :true,								//Wrapper上添加等于slides相加的宽高
+          pagination : '.swiper-pagination',	//
+          paginationHide :true,
+          paginationClickable :true,					//圆点的点击事件
+          paginationBulletRender: function (swiper, index, className) {
+				     return '<span class="' + className + '" >' + (index + 1) + '</span>';
+				  },
+          observeParents:true									//将observe应用于Swiper的父元素
+        },
+        swiperSlides: ['彩票游戏','真人视频','电子游戏','体育赛事']
     }
   },
   computed: {
@@ -39,40 +46,53 @@ export default {
 	  }
 	},
   components:{
-		banner,fcula,fculb,fculc,fculd
+		fcula,fculb,fculc,fculd
 	}
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-
-.fournav{
+.indexfour{
 	width:100%;
-	height:.9rem;
-	background:#272822;
+	overflow:hidden;
+	height:100%;
+	background:#222;
 }
-.fournav li{
+.fourcontent{
+	height:5rem;
+	padding-top:0.93rem;
+}
+.fourcontent .swiper-wrapper{
+	height:2rem;
+}
+.fourcontent .swiper-wrapper div.swiper-slide {
 	float:left;
+}
+.fourcontent .swiper-pagination-bullets{
+	width:100%;
+	background: #999;
+	position:absolute;
+	top:0;
+}
+.banner img{
+	height:3rem;
+	width:7.5rem;
+	display:block;
+}
+.fourcontent .swiper-pagination-bullets span.swiper-pagination-bullet{
 	width:25%;
 	height:.9rem;
 	line-height:.9rem;
-	color:#fff;
+	color:#c3ab6d;
+	background:#0C0E0E;
+	display: inline-block;
 }
 .fourcontent{
-	width:100%;
-	height:61.8%;
-	background:red;
-	overflow:hidden;
+	position:relative;
 }
-.fcul{
+.indexfour .swiperOptionnav{
 	width:400%;
-	height:100%;
-	background:green;
 }
-.fcul li{
-	float:left;
-	width:7.5rem;
-	height:100%;
-}
+
 </style>

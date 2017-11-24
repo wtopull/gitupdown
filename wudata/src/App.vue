@@ -51,6 +51,7 @@ ul{
   color: #2c3e50;
   font-size:0.3rem;
   height:100%;
+  width:100%;
 }
 .content{
 	height:92%;
@@ -69,7 +70,7 @@ ul{
 .footer li.footernav{
 	width:25%;
 	float:left;
-	color:#fff;
+	color:#c3ab6d;
 	height:1.0672rem;
 	line-height:1.0672rem;
 }
