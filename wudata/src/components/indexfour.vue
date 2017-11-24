@@ -3,10 +3,10 @@
     <h1>{{ msg }}</h1>
     <banner></banner>
     <ul class="fournav">
-			<router-link to="/fcula" tag="li">彩票游戏</router-link>
-			<router-link to="/fculb" tag="li">真人视频</router-link>
-			<router-link to="/fculc" tag="li">电子游戏</router-link>
-			<router-link to="/fculd" tag="li">体育赛事</router-link>
+			<router-link to="/indexfour/fcula" tag="li">彩票游戏</router-link>
+			<router-link to="/indexfour/fculb" tag="li">真人视频</router-link>
+			<router-link to="/indexfour/fculc" tag="li">电子游戏</router-link>
+			<router-link to="/indexfour/fculd" tag="li">体育赛事</router-link>
 		</ul>
 		<div class="fourcontent">
 			<ul class="fcul">

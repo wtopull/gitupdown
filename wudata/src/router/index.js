@@ -17,12 +17,10 @@ export default new Router({
     {path: '/indexone',name: 'indexone',component: indexone},
     {path: '/indextwo',name: 'indextwo',component: indextwo},
     {path: '/indexthree',name: 'indexthree',component: indexthree},
-    {
-//    path: '/indexfour/:userID',
-      path:'/indexfour',name:'indexfour',component: indexfour}
-//  {path:'/fcula', name:'fcula', component:fcula},
-//  {path:'/fculb', name:'fculb', component:fculb},
-//	{path:'/fculc', name:'fculc', component:fculc},
-//	{path:'/fculd', name:'fculd', component:fculd}
+    {path:'/indexfour',name:'indexfour',component: indexfour},
+    {path:'/indexfour/fcula', name:'fcula', component:fcula},
+    {path:'/indexfour/fculb', name:'fculb', component:fculb},
+		{path:'/indexfour/fculc', name:'fculc', component:fculc},
+		{path:'/indexfour/fculd', name:'fculd', component:fculd}
 ]
 });
