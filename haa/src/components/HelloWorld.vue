@@ -1,11 +1,12 @@
 <template>
   <div class="hello">
+    <p>afdsafsd</p>
     <ul>
       <router-link to="/aaa" tag="li"></router-link>
       <router-link to="/bbb" tag="li"></router-link>
       <router-link to="/ccc" tag="li"></router-link>
+      <router-view /> 
     </ul>
-    <router-view></router-view>
   </div>
 
 </template>

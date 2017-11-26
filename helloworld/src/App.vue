@@ -23,22 +23,9 @@
     name: 'app',
     data(){
       return{
-        seller:{}
+        
       }
-      
     },
-      created() {
-      axios.get('/api/seller').then(function (response) {
-          response = response.body;
-          if(response.errno === ERR_OK){
-            this.seller = response.data;
-            console.log(response);
-          }
-        });
-
-    },
-    
-
     components: {
       my_header
     }
